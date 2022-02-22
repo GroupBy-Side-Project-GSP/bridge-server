@@ -1,10 +1,12 @@
 package com.gsp.bridge.domain.user.domain;
 
 import com.gsp.bridge.global.enums.Authority;
+import com.gsp.bridge.infrastructure.s3.DefaultImage;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -28,7 +30,7 @@ public class User {
     @Column(nullable = false)
     private String companyName;
 
-    @Column
+    @ColumnDefault(DefaultImage.USER_PROFILE_IMAGE)
     private String profileImageUrl;
 
     @Column
