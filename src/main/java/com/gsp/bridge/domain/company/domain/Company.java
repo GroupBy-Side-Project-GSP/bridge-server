@@ -82,5 +82,5 @@ public class Company {
         this.appDeviceToken = appDeviceToken;
         this.webDeviceToken = webDeviceToken;
     }
-    
+
 }
