@@ -34,7 +34,7 @@ public class User {
     @Column
     private String companyInformation;
 
-    @Column
+    @Column(nullable = fal)
     private String companyPhoneNumber;
 
     @Column
