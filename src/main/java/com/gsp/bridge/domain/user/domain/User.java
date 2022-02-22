@@ -35,6 +35,9 @@ public class User {
     private String companyInformation;
 
     @Column
+    private String companyPhoneNumber;
+
+    @Column
     private String projectExplanation;
 
     @Column(nullable = false)
@@ -63,14 +66,16 @@ public class User {
     private String webDeviceToken;
 
     @Builder
-    public User(String email, String password, String companyName, String companyInformation,
-                String projectExplanation, String managerName, String managerEmail, String address,
+    public User(String email, String password, String companyName, String profileImageUrl, String companyInformation,
+                String companyPhoneNumber, String projectExplanation, String managerName, String managerEmail, String address,
                 Authority authority, LocalDateTime signUpDateTime, String simpleProjectExplanation,
                 String appDeviceToken, String webDeviceToken) {
         this.email = email;
         this.password = password;
         this.companyName = companyName;
+        this.profileImageUrl = profileImageUrl;
         this.companyInformation = companyInformation;
+        this.companyPhoneNumber = companyPhoneNumber;
         this.projectExplanation = projectExplanation;
         this.managerName = managerName;
         this.managerEmail = managerEmail;
