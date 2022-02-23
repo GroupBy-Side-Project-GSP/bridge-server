@@ -1,5 +1,6 @@
 package com.gsp.bridge.domain.notice.domain;
 
+import com.gsp.bridge.domain.company.domain.Company;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -27,10 +28,15 @@ public class Notice {
     @NotNull
     private LocalDateTime createDateTime;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "company-id")
+    private Company company;
+
     @Builder
-    public Notice(String title, String content, LocalDateTime createDateTime) {
+    public Notice(String title, String content, LocalDateTime createDateTime, Company company) {
         this.title = title;
         this.content = content;
         this.createDateTime = createDateTime;
+        this.company = company;
     }
 }
