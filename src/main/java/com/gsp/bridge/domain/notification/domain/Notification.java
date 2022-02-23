@@ -19,14 +19,14 @@ public class Notification {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
     @Column(length = 20, nullable = false)
     private String title;
 
+    @NotNull
     @Column(nullable = false)
     private String content;
 
-    @Enumerated(EnumType.STRING)
-    @Column(length = 4, nullable = false)
     private Type type;
 
     @NotNull
