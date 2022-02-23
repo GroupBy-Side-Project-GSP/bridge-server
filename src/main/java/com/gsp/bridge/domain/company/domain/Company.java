@@ -64,7 +64,7 @@ public class Company {
 
     public Company(String email, String password, String profileImageUrl, String companyName,
                    String companyInformation, String projectExplanation, String managerName,
-                   String managerEmail, String companyPhoneNumber, String address, LocalDateTime sigUppDateTime,
+                   String managerEmail, String companyPhoneNumber, String address, LocalDateTime signUpDateTime,
                    String simpleProjectExplanation, Authority authority, String appDeviceToken, String webDeviceToken) {
         this.email = email;
         this.password = password;
@@ -76,7 +76,7 @@ public class Company {
         this.managerEmail = managerEmail;
         this.companyPhoneNumber = companyPhoneNumber;
         this.address = address;
-        this.sigUppDateTime = sigUppDateTime;
+        this.signUpDateTime = signUpDateTime;
         this.simpleProjectExplanation = simpleProjectExplanation;
         this.authority = authority;
         this.appDeviceToken = appDeviceToken;
