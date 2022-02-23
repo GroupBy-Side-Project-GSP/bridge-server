@@ -3,6 +3,7 @@ package com.gsp.bridge.domain.company.domain;
 import com.gsp.bridge.global.enums.Authority;
 import com.gsp.bridge.infrastructure.s3.DefaultImage;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
@@ -62,6 +63,7 @@ public class Company {
     @Column(length = 64)
     private String webDeviceToken;
 
+    @Builder
     public Company(String email, String password, String profileImageUrl, String companyName,
                    String companyInformation, String projectExplanation, String managerName,
                    String managerEmail, String companyPhoneNumber, String address, LocalDateTime signUpDateTime,
