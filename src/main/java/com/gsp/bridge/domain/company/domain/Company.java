@@ -49,7 +49,7 @@ public class Company {
     private String address;
 
     @NotNull
-    private LocalDateTime sigUppDateTime;
+    private LocalDateTime sigUpDateTime;
 
     private String simpleProjectExplanation;
 
