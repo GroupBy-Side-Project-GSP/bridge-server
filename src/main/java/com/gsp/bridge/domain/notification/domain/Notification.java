@@ -27,6 +27,7 @@ public class Notification {
     @Column(nullable = false)
     private String content;
 
+    @Enumerated(EnumType.STRING)
     private Type type;
 
     @NotNull
