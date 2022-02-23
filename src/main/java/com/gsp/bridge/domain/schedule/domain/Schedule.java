@@ -23,7 +23,7 @@ public class Schedule {
     private LocalDateTime scheduleDatetime;
 
     @NotNull
-    private LocalDateTime alarmDatetime;
+    private LocalDateTime alarmDateTime;
 
     @NotNull
     private String explanation;
@@ -33,9 +33,9 @@ public class Schedule {
     private Company company;
 
     @Builder
-    public Schedule(LocalDateTime scheduleDatetime, LocalDateTime alarmDatetime, Company company) {
+    public Schedule(LocalDateTime scheduleDatetime, LocalDateTime alarmDateTime, Company company) {
         this.scheduleDatetime = scheduleDatetime;
-        this.alarmDatetime = alarmDatetime;
+        this.alarmDateTime = alarmDateTime;
         this.company = company;
     }
 }
