@@ -33,7 +33,7 @@ public class NotificationEntity {
     @Enumerated(EnumType.STRING)
     private Type type;
 
-    @Column(nullable = false)
+    @NotNull
     private Long data;
 
     @NotNull
