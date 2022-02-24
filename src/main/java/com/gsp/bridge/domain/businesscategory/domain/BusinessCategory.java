@@ -31,8 +31,9 @@ public class BusinessCategory {
     private Company company;
 
     @Builder
-    public BusinessCategory(String categoryName, InterestIndustry interestIndustry) {
+    public BusinessCategory(String categoryName, InterestIndustry interestIndustry, Company company) {
         this.categoryName = categoryName;
         this.interestIndustry = interestIndustry;
+        this.company = company;
     }
 }
