@@ -19,7 +19,7 @@ public class Feedback {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
+    @Column(length = 20, nullable = false)
     private String title;
 
     @NotNull
