@@ -5,6 +5,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -21,11 +22,14 @@ public class NotificationEntity {
     private Long id;
 
     @NotNull
+    @Length(max = 20)
     private String title;
 
     @NotNull
     private String content;
 
+    @NotNull
+    @Length(max = 4)
     @Enumerated(EnumType.STRING)
     private Type type;
 
