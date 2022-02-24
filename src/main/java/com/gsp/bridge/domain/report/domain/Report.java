@@ -22,7 +22,6 @@ public class Report {
     @Column(length = 20, nullable = false)
     private String title;
 
-    @Column
     private String content;
 
     @NotNull
