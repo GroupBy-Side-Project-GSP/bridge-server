@@ -34,13 +34,13 @@ public class NotificationEntity {
     private Type type;
 
     @Column(nullable = false)
-    private String data;
+    private Long data;
 
     @NotNull
     private LocalDateTime createdDatetime;
 
     @Builder
-    public NotificationEntity(String title, String content, Type type, String data, LocalDateTime createdDatetime) {
+    public NotificationEntity(String title, String content, Type type, Long data, LocalDateTime createdDatetime) {
         this.title = title;
         this.content = content;
         this.type = type;
