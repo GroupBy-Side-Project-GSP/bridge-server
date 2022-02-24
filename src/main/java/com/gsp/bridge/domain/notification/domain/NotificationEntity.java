@@ -33,14 +33,18 @@ public class NotificationEntity {
     @Enumerated(EnumType.STRING)
     private Type type;
 
+    @Column(nullable = false)
+    private String data;
+
     @NotNull
     private LocalDateTime createdDatetime;
 
     @Builder
-    public NotificationEntity(String title, String content, Type type, LocalDateTime createdDatetime) {
+    public NotificationEntity(String title, String content, Type type, String data, LocalDateTime createdDatetime) {
         this.title = title;
         this.content = content;
         this.type = type;
+        this.data = data;
         this.createdDatetime = createdDatetime;
     }
 
