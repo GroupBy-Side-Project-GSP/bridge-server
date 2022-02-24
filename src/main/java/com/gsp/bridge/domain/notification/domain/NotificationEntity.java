@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class Notification {
+public class NotificationEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +32,7 @@ public class Notification {
     private LocalDateTime createdDatetime;
 
     @Builder
-    public Notification(String title, String content, Type type, LocalDateTime createdDatetime) {
+    public NotificationEntity(String title, String content, Type type, LocalDateTime createdDatetime) {
         this.title = title;
         this.content = content;
         this.type = type;
