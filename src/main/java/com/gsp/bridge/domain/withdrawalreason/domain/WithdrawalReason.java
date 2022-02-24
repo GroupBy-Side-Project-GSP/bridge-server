@@ -37,7 +37,8 @@ public class WithdrawalReason {
     private Company company;
 
     @Builder
-    public WithdrawalReason(String title, String content, LocalDateTime createdDatetime, WithdrawalReasonCategory withdrawalReasonCategory, Company company) {
+    public WithdrawalReason(String title, String content, LocalDateTime createdDatetime,
+                            WithdrawalReasonCategory withdrawalReasonCategory, Company company) {
         this.title = title;
         this.content = content;
         this.createdDatetime = createdDatetime;
