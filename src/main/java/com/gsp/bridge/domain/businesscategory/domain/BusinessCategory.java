@@ -1,5 +1,6 @@
 package com.gsp.bridge.domain.businesscategory.domain;
 
+import com.gsp.bridge.domain.company.domain.Company;
 import com.gsp.bridge.domain.interestindustry.domain.InterestIndustry;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -22,8 +23,12 @@ public class BusinessCategory {
     private String categoryName;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "InterestIndustry")
+    @JoinColumn(name = "interested-industry-id")
     private InterestIndustry interestIndustry;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "company-id")
+    private Company company;
 
     @Builder
     public BusinessCategory(String categoryName, InterestIndustry interestIndustry) {
