@@ -1,5 +1,6 @@
 package com.gsp.bridge.domain.file.domain;
 
+import com.gsp.bridge.domain.businesscollaboration.domain.BusinessCollaboration;
 import lombok.Builder;
 import lombok.Getter;
 
