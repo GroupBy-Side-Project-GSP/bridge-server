@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name = "file")
+@Table(name = "tbl_file")
 public class FileEntity {
 
     @Id
