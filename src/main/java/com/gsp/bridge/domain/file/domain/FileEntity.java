@@ -1,14 +1,17 @@
 package com.gsp.bridge.domain.file.domain;
 
 import com.gsp.bridge.domain.businesscollaboration.domain.BusinessCollaboration;
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Getter
 @Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "file")
 public class FileEntity {
 
