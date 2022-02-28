@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
+@Table(name = "tbl_interest_industry")
 public class InterestIndustry {
 
     @Id
