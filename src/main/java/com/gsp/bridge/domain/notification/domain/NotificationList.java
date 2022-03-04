@@ -13,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @IdClass(NotificationListId.class)
 @Entity
+@Table(name="tbl_notification_list")
 public class NotificationList {
 
     @Id
