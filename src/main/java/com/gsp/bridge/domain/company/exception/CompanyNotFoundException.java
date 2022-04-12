@@ -5,7 +5,7 @@ import com.gsp.bridge.global.error.exception.ErrorCode;
 
 public class CompanyNotFoundException extends CustomException {
 
-    public static  final CustomException EXCEPTION =
+    public static final CustomException EXCEPTION =
             new CompanyNotFoundException();
 
     private CompanyNotFoundException() {
