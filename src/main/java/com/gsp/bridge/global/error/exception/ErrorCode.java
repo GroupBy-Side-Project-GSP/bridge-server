@@ -9,7 +9,7 @@ import lombok.Getter;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum ErrorCode {
 
-    ;
+    COMPANY_NOT_FOUND(404, "COMPANY-404-1", "Company Not Found.");
 
     private final int status;
     private final String code;
