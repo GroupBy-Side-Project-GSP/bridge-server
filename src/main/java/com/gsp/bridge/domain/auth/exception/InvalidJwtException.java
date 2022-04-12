@@ -9,6 +9,6 @@ public class InvalidJwtException extends CustomException {
             new InvalidJwtException();
 
     private InvalidJwtException() {
-        super(ErrorCode);
+        super(ErrorCode.INVALID_TOKEN);
     }
 }

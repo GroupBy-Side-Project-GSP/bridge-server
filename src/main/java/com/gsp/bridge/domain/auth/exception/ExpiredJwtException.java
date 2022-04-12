@@ -9,6 +9,6 @@ public class ExpiredJwtException extends CustomException {
             new ExpiredJwtException();
 
     private ExpiredJwtException() {
-        super(ErrorCode);
+        super(ErrorCode.EXPIRED_TOKEN);
     }
 }
