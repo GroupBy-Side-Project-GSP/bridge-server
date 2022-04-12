@@ -9,7 +9,7 @@ import lombok.Getter;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum ErrorCode {
 
-    FORBIDDEN(403, "COMMON-03-1", "Forbidden");
+    ;
 
     private final int status;
     private final String code;
