@@ -17,10 +17,11 @@ import javax.validation.constraints.NotNull;
 @Table(name = "tbl_notification")
 public class NotificationEntity extends BaseTimeIdEntity {
 
-    @Column(length = 200, nullable = false)
+    @NotNull
+    @Length(max = 20)
     private String title;
 
-    @Column(nullable = false)
+    @NotNull
     private String content;
 
     @NotNull
@@ -28,7 +29,7 @@ public class NotificationEntity extends BaseTimeIdEntity {
     @Enumerated(EnumType.STRING)
     private Type type;
 
-    @Column(nullable = false)
+    @NotNull
     private String data;
 
     @Builder

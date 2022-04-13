@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -25,8 +26,8 @@ public class NotificationList {
     @JoinColumn(name = "user_id")
     private Company company;
 
+    @NotNull
     @ColumnDefault("0")
-    @Column(nullable = false)
     private Boolean isRead;
 
     @Builder
