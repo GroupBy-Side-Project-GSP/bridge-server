@@ -11,6 +11,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Getter
+@Table(name = "tbl_notification_list")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @IdClass(NotificationListId.class)
 @Entity
