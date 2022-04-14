@@ -22,7 +22,7 @@ import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class NotificationListServiceTest {
+class NotificationListServiceTest {
 
     @Mock
     private CompanyFacade companyFacade;
@@ -34,7 +34,7 @@ public class NotificationListServiceTest {
     private QueryNotificationListService service;
 
     @Test
-    public void 알림_리스트_가져오기() {
+    void 알림_리스트_가져오기() {
 
         String name = "Test Name";
         String accountId = "Test AccountId";
