@@ -15,6 +15,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * notification_list를 쿼리로 가져옴
+ */
+
 @Service
 @RequiredArgsConstructor
 public class QueryNotificationListService {
