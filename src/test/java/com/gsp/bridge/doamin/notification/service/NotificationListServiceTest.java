@@ -35,10 +35,6 @@ class NotificationListServiceTest {
 
     @Test
     void 알림_리스트_가져오기() {
-
-        String name = "Test Name";
-        String accountId = "Test AccountId";
-
         //given
         Page<NotificationList> notificationList = Page.empty(Pageable.unpaged());
         Company company = Company.builder().build();
