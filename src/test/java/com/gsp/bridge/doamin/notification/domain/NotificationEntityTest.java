@@ -21,8 +21,7 @@ class NotificationEntityTest {
     private final NotificationList notification = NotificationList.builder().build();
 
     @Test
-    @DisplayName("Builder를 할용하여 NotificationEntity객체를 생성하는 메소드")
-    void createByBuilder() {
+    void notificaotin_객체생성() {
         //given
         String title = "test notification";
         String content = "testtest notification";
