@@ -38,8 +38,9 @@ class NotificationListServiceTest {
 
         String name = "Test Name";
         String accountId = "Test AccountId";
-        Page<NotificationList> notificationList = Page.empty(Pageable.unpaged());
+
         //given
+        Page<NotificationList> notificationList = Page.empty(Pageable.unpaged());
         Company company = Company.builder().build();
         Pageable pageable = PageRequest.of(5, 5);
         QueryNotificationListResponse response = new QueryNotificationListResponse(new ArrayList<>());
