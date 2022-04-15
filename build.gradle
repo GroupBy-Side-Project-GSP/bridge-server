@@ -18,6 +18,12 @@ configurations {
 
 repositories {
     mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
+}
+
+jacoco {
+    toolVersion = "0.8.7"
 }
 
 dependencies {
