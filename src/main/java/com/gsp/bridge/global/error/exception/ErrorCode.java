@@ -14,7 +14,9 @@ public enum ErrorCode {
     EXPIRED_TOKEN(401, "TOKEN-401-1", "Expired Token"),
     INVALID_TOKEN(401, "TOKEN-401-2", "Invalid Token"),
 
-    INTERNAL_SERVER_ERROR(500, "SERVER-500-1", "Internal Server Error");
+    INTERNAL_SERVER_ERROR(500, "SERVER-500-1", "Internal Server Error"),
+
+    NOTIFICATION_NOT_FOUND(404, "NOTIFICATION-404-1", "Notification Not Found");
 
     private final int status;
     private final String code;
