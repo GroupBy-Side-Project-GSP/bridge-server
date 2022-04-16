@@ -13,6 +13,6 @@ public class NotificationListId implements Serializable {
 
     private Long notificationEntity;
 
-    private Long company;
+    private Integer company;
 
 }
