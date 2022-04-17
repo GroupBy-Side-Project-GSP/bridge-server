@@ -1,4 +1,4 @@
-package com.gsp.bridge.domain.company.domain.entity;
+package com.gsp.bridge.domain.notice.domain;
 
 import com.gsp.bridge.domain.notice.domain.Notice;
 import com.gsp.bridge.global.entity.BaseTimeIdEntity;
