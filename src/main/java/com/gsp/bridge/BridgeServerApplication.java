@@ -1,12 +1,11 @@
 package com.gsp.bridge;
 
-import com.gsp.bridge.global.security.jwt.JwtProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
-@EnableConfigurationProperties(value = {JwtProperties.class})
+@ConfigurationPropertiesScan
 @EnableJpaAuditing
 @SpringBootApplication
 public class BridgeServerApplication {
