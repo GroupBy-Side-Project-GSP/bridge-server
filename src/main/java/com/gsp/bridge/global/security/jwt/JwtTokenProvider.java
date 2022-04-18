@@ -7,6 +7,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.time.ZonedDateTime;
 import java.util.Date;
 
+@ConfigurationPropertiesScan
 @Component
 @RequiredArgsConstructor
 public class JwtTokenProvider {
