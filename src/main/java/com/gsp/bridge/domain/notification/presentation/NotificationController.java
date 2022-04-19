@@ -23,7 +23,7 @@ public class NotificationController {
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PatchMapping("/{notification-id}")
-    public void notificationRead(@PathVariable("notification-id") Long notificationId) {
+    public void notificationRead(@PathVariable("notification-id") Integer notificationId) {
         notificationReadService.execute(notificationId);
     }
 }
