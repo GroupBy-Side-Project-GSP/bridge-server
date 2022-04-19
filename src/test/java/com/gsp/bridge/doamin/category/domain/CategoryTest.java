@@ -1,6 +1,6 @@
 package com.gsp.bridge.doamin.category.domain;
 
-import com.gsp.bridge.domain.cateogry.domain.Category;
+import com.gsp.bridge.domain.category.domain.Category;
 import com.gsp.bridge.domain.company.domain.entity.Company;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;

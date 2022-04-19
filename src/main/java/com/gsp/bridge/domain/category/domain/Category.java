@@ -1,6 +1,5 @@
-package com.gsp.bridge.domain.cateogry.domain;
+package com.gsp.bridge.domain.category.domain;
 
-import com.google.firebase.database.annotations.NotNull;
 import com.gsp.bridge.domain.company.domain.entity.Company;
 import com.gsp.bridge.global.entity.BaseTimeIdEntity;
 import lombok.AccessLevel;
@@ -10,6 +9,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
