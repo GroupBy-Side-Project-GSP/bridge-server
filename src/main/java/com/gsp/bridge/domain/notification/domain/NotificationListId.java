@@ -11,7 +11,7 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class NotificationListId implements Serializable {
 
-    private Long notificationEntity;
+    private Integer notificationEntity;
 
     private Integer company;
 

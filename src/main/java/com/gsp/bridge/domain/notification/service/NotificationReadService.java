@@ -21,7 +21,7 @@ public class NotificationReadService {
     private final CompanyFacade companyFacade;
 
     @Transactional
-    public void execute(Long notificationId) {
+    public void execute(Integer notificationId) {
         if (notificationRepository.findById(notificationId).isEmpty()) {
             throw NotificationNotFoundException.EXCEPTION;
         }
