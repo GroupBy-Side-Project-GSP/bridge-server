@@ -13,8 +13,9 @@ class NoticeAttachmentFileTest {
     void 공지사항_첨부파일_객체_생성_성공_테스트() {
         // given
         String noticeAttachmentFileUrl = "https:/~~~";
+        String noticeTitle = "공지사항";
         Notice notice = Notice.builder()
-                .title("공지사항")
+                .title(noticeTitle)
                 .build();
 
         // when

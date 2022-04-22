@@ -14,8 +14,9 @@ class NoticeTest {
         // given
         String title = "공지사항 제목";
         String content = "공지사항 내용";
+        String companyName = "company";
         Company company = Company.builder()
-                .companyName("company")
+                .companyName(companyName)
                 .build();
 
         // when
