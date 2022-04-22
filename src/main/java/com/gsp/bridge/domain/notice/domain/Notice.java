@@ -5,10 +5,7 @@ import com.gsp.bridge.global.entity.BaseTimeIdEntity;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Getter
@@ -25,7 +22,7 @@ public class Notice extends BaseTimeIdEntity {
     @Length(max = 2000)
     private String content;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
     private Company company;
 
