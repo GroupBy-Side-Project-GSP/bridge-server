@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -16,6 +17,7 @@ import javax.persistence.*;
 public class NoticeAttachmentFile extends BaseTimeIdEntity {
 
     @Length(max = 255)
+    @NotNull
     private String noticeAttachmentFileUrl;
 
     @ManyToOne(fetch = FetchType.LAZY)
