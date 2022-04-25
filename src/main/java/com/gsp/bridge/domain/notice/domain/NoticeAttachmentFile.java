@@ -16,12 +16,12 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class NoticeAttachmentFile extends BaseTimeIdEntity {
 
-    @Length(max = 255)
     @NotNull
+    @Length(max = 255)
     private String noticeAttachmentFileUrl;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "notice_id")
+    @JoinColumn(name = "notice_id", nullable = false)
     private Notice notice;
 
     @Builder
