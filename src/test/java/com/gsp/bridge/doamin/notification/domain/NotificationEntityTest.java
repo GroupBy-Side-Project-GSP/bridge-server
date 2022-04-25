@@ -4,21 +4,13 @@ import com.gsp.bridge.domain.company.domain.entity.Company;
 import com.gsp.bridge.domain.notification.domain.NotificationEntity;
 import com.gsp.bridge.domain.notification.domain.NotificationList;
 import com.gsp.bridge.domain.notification.domain.type.Type;
-import org.junit.jupiter.api.*;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class NotificationEntityTest {
-
-    private final String title = "Test title";
-
-    private final String content = "Test content";
-
-    private final boolean isRead = false;
-
-    private final NotificationList notification = NotificationList.builder().build();
 
     @Test
     void notificaotin_객체생성() {
@@ -48,16 +40,4 @@ class NotificationEntityTest {
         );
     }
 
-    @Order(0)
-    @Test
-    void 알림_읽음여부() {
-        assertThat(isRead).isEqualTo(notification.getIsRead());
-    }
-
-    @Order(1)
-    @Test
-    void 알림_확인() {
-        notification.updateNotificationIsRead();
-        assertTrue(notification.getIsRead());
-    }
 }
