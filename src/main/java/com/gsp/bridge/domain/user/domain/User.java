@@ -1,9 +1,11 @@
 package com.gsp.bridge.domain.user.domain;
 
-import com.gsp.bridge.domain.user.domain.type.Authority;
 import com.gsp.bridge.global.entity.BaseTimeIdEntity;
 import com.gsp.bridge.infrastructure.s3.DefaultImage;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.validator.constraints.Length;
 

@@ -1,7 +1,7 @@
 package com.gsp.bridge.doamin.category.domain;
 
 import com.gsp.bridge.domain.category.domain.Category;
-import com.gsp.bridge.domain.company.domain.entity.Company;
+import com.gsp.bridge.domain.user.domain.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -15,17 +15,17 @@ class CategoryTest {
 
         //given
         String title = "제목";
-        Company company = Company.builder().build();
+        User user = User.builder().build();
 
         Category category  = Category.builder()
                 .title(title)
-                .company(company)
+                .user(user)
                 .build();
 
         //then
         Assertions.assertAll(
                 () -> Assertions.assertEquals(title,category.getTitle()),
-                () -> Assertions.assertEquals(company, category.getCompany())
+                () -> Assertions.assertEquals(user, category.getUser())
         );
     }
     

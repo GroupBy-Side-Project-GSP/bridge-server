@@ -30,7 +30,7 @@ public class NotificationReadService {
 
         NotificationListId notificationListId = NotificationListId.builder()
                 .notificationEntity(notificationId)
-                .company(user.getId())
+                .user(user.getId())
                 .build();
 
         NotificationList notificationList = notificationListRepository.findById(notificationListId)
