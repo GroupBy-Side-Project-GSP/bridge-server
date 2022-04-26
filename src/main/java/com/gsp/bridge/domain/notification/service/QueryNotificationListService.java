@@ -19,8 +19,8 @@ import java.util.stream.Collectors;
  * notification_list를 쿼리로 가져옴
  */
 
-@Service
 @RequiredArgsConstructor
+@Service
 public class QueryNotificationListService {
 
     private final NotificationListRepository notificationListRepository;
