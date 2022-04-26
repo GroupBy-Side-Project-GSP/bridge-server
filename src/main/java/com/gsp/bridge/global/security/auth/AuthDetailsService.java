@@ -1,7 +1,7 @@
 package com.gsp.bridge.global.security.auth;
 
 import com.gsp.bridge.domain.user.domain.repository.UserRepository;
-import com.gsp.bridge.domain.user.exception.CompanyNotFoundException;
+import com.gsp.bridge.domain.user.exception.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -18,7 +18,7 @@ public class AuthDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String accountId) throws UsernameNotFoundException {
         return userRepository.findByAccountId(accountId)
                 .map(AuthDetails::new)
-                .orElseThrow(() -> CompanyNotFoundException.EXCEPTION);
+                .orElseThrow(() -> UserNotFoundException.EXCEPTION);
     }
 
 }
