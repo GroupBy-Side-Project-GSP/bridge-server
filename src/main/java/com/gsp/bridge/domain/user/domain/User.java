@@ -1,12 +1,9 @@
-package com.gsp.bridge.domain.company.domain.entity;
+package com.gsp.bridge.domain.user.domain.entity;
 
-import com.gsp.bridge.domain.company.domain.entity.type.Authority;
+import com.gsp.bridge.domain.user.domain.entity.type.Authority;
 import com.gsp.bridge.global.entity.BaseTimeIdEntity;
 import com.gsp.bridge.infrastructure.s3.DefaultImage;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.validator.constraints.Length;
 
@@ -20,7 +17,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 @Table(name = "tbl_user")
-public class Company extends BaseTimeIdEntity {
+public class User extends BaseTimeIdEntity {
 
     @NotNull
     @Length(max = 64)
@@ -67,10 +64,10 @@ public class Company extends BaseTimeIdEntity {
     private Authority authority;
 
     @Builder
-    public Company(String email, String accountId, String password, String profileImageUrl,
-                   String companyName, String companyInformation, String managerEmail,
-                   String companyPhoneNumber, String address, String appDeviceToken,
-                   String webDeviceToken, Authority authority) {
+    public User(String email, String accountId, String password, String profileImageUrl,
+                String companyName, String companyInformation, String managerEmail,
+                String companyPhoneNumber, String address, String appDeviceToken,
+                String webDeviceToken, Authority authority) {
         this.email = email;
         this.accountId = accountId;
         this.password = password;
