@@ -1,7 +1,7 @@
 package com.gsp.bridge.doamin.notification.service;
 
-import com.gsp.bridge.domain.company.domain.entity.Company;
-import com.gsp.bridge.domain.company.facade.CompanyFacade;
+import com.gsp.bridge.domain.user.domain.entity.User;
+import com.gsp.bridge.domain.user.facade.UserFacade;
 import com.gsp.bridge.domain.notification.domain.NotificationList;
 import com.gsp.bridge.domain.notification.domain.repository.NotificationListRepository;
 import com.gsp.bridge.domain.notification.presentation.response.QueryNotificationListResponse;
@@ -25,7 +25,7 @@ import static org.mockito.Mockito.when;
 class NotificationListServiceTest {
 
     @Mock
-    private CompanyFacade companyFacade;
+    private UserFacade userFacade;
 
     @Mock
     private NotificationListRepository notificationListRepository;
@@ -37,13 +37,13 @@ class NotificationListServiceTest {
     void 알림_리스트_가져오기() {
         //given
         Page<NotificationList> notificationList = Page.empty(Pageable.unpaged());
-        Company company = Company.builder().build();
+        User user = User.builder().build();
         Pageable pageable = PageRequest.of(5, 5);
         QueryNotificationListResponse response = new QueryNotificationListResponse(new ArrayList<>());
 
-        when(companyFacade.getCurrentCompany())
-                .thenReturn(company);
-        given(notificationListRepository.findByCompany(company, pageable))
+        when(userFacade.getCurrentCompany())
+                .thenReturn(user);
+        given(notificationListRepository.findByCompany(user, pageable))
                 .willReturn(notificationList);
 
         //when
