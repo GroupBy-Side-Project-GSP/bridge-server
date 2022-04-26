@@ -30,7 +30,7 @@ public class QueryNotificationListService {
     public QueryNotificationListResponse execute(Pageable pageable) {
 
         User user = userFacade.getCurrentCompany();
-        List<NotificationResponse> notificationLists = notificationListRepository.findByCompany(user, pageable)
+        List<NotificationResponse> notificationLists = notificationListRepository.findByUser(user, pageable)
                 .stream()
                 .map(this::getNotification)
                 .collect(Collectors.toList());
