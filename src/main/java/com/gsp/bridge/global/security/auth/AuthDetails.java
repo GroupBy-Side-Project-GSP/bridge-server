@@ -1,6 +1,6 @@
 package com.gsp.bridge.global.security.auth;
 
-import com.gsp.bridge.domain.company.domain.entity.Company;
+import com.gsp.bridge.domain.user.domain.User;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -15,12 +15,12 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AuthDetails implements UserDetails {
 
-    private final Company company;
+    private final User user;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority(company.getAuthority().name()));
+        authorities.add(new SimpleGrantedAuthority(user.getAuthority().name()));
         return authorities;
     }
 
@@ -31,7 +31,7 @@ public class AuthDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return company.getAccountId();
+        return user.getAccountId();
     }
 
     @Override

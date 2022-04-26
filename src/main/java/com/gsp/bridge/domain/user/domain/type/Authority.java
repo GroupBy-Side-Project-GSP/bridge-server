@@ -1,4 +1,4 @@
-package com.gsp.bridge.domain.company.domain.entity.type;
+package com.gsp.bridge.domain.user.domain.type;
 
 public enum Authority {
     USER,

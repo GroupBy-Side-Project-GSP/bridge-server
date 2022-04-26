@@ -1,7 +1,7 @@
 package com.gsp.bridge.domain.notification.service;
 
-import com.gsp.bridge.domain.company.domain.entity.Company;
-import com.gsp.bridge.domain.company.facade.CompanyFacade;
+import com.gsp.bridge.domain.user.domain.User;
+import com.gsp.bridge.domain.user.facade.UserFacade;
 import com.gsp.bridge.domain.notification.domain.NotificationEntity;
 import com.gsp.bridge.domain.notification.domain.NotificationList;
 import com.gsp.bridge.domain.notification.domain.repository.NotificationListRepository;
@@ -19,18 +19,18 @@ import java.util.stream.Collectors;
  * notification_list를 쿼리로 가져옴
  */
 
-@Service
 @RequiredArgsConstructor
+@Service
 public class QueryNotificationListService {
 
     private final NotificationListRepository notificationListRepository;
-    private final CompanyFacade companyFacade;
+    private final UserFacade userFacade;
 
     @Transactional(readOnly = true)
     public QueryNotificationListResponse execute(Pageable pageable) {
 
-        Company company = companyFacade.getCurrentCompany();
-        List<NotificationResponse> notificationLists = notificationListRepository.findByCompany(company, pageable)
+        User user = userFacade.getCurrentUser();
+        List<NotificationResponse> notificationLists = notificationListRepository.findByUser(user, pageable)
                 .stream()
                 .map(this::getNotification)
                 .collect(Collectors.toList());

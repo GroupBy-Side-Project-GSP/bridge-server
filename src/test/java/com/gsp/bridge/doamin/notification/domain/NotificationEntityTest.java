@@ -1,6 +1,6 @@
 package com.gsp.bridge.doamin.notification.domain;
 
-import com.gsp.bridge.domain.company.domain.entity.Company;
+import com.gsp.bridge.domain.user.domain.User;
 import com.gsp.bridge.domain.notification.domain.NotificationEntity;
 import com.gsp.bridge.domain.notification.domain.NotificationList;
 import com.gsp.bridge.domain.notification.domain.type.Type;
@@ -17,7 +17,7 @@ class NotificationEntityTest {
         //given
         String title = "test notification";
         String content = "testtest notification";
-        Company company = Company.builder()
+        User user = User.builder()
                 .companyName("회사")
                 .build();
         //when
@@ -30,13 +30,13 @@ class NotificationEntityTest {
 
         NotificationList notificationList = NotificationList.builder()
                 .notificationEntity(notification)
-                .companyId(company)
+                .userId(user)
                 .build();
 
         //then
         Assertions.assertAll(
                 () -> Assertions.assertEquals(notification, notificationList.getNotificationEntity()),
-                () -> Assertions.assertEquals(company, notificationList.getCompany())
+                () -> Assertions.assertEquals(user, notificationList.getUser())
         );
     }
 

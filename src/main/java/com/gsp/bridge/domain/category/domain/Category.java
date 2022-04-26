@@ -1,6 +1,6 @@
 package com.gsp.bridge.domain.category.domain;
 
-import com.gsp.bridge.domain.company.domain.entity.Company;
+import com.gsp.bridge.domain.user.domain.User;
 import com.gsp.bridge.global.entity.BaseTimeIdEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -22,12 +22,12 @@ public class Category extends BaseTimeIdEntity {
     private String title;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "company_id")
-    private Company company;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Builder
-    public Category(String title, Company company) {
+    public Category(String title, User user) {
         this.title = title;
-        this.company = company;
+        this.user = user;
     }
 }

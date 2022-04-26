@@ -1,7 +1,7 @@
 package com.gsp.bridge.global.security.auth;
 
-import com.gsp.bridge.domain.company.domain.entity.repository.CompanyRepository;
-import com.gsp.bridge.domain.company.exception.CompanyNotFoundException;
+import com.gsp.bridge.domain.user.domain.repository.UserRepository;
+import com.gsp.bridge.domain.user.exception.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,13 +12,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class AuthDetailsService implements UserDetailsService {
 
-    private final CompanyRepository companyRepository;
+    private final UserRepository userRepository;
 
     @Override
     public UserDetails loadUserByUsername(String accountId) throws UsernameNotFoundException {
-        return companyRepository.findByAccountId(accountId)
+        return userRepository.findByAccountId(accountId)
                 .map(AuthDetails::new)
-                .orElseThrow(() -> CompanyNotFoundException.EXCEPTION);
+                .orElseThrow(() -> UserNotFoundException.EXCEPTION);
     }
 
 }
