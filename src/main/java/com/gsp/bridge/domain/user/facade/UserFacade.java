@@ -1,7 +1,7 @@
 package com.gsp.bridge.domain.user.facade;
 
 import com.gsp.bridge.domain.user.domain.User;
-import com.gsp.bridge.domain.user.domain.UserRepository;
+import com.gsp.bridge.domain.user.domain.repository.UserRepository;
 import com.gsp.bridge.domain.user.exception.CompanyNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;

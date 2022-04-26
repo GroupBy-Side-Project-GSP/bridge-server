@@ -1,6 +1,6 @@
 package com.gsp.bridge.global.security.auth;
 
-import com.gsp.bridge.domain.user.domain.UserRepository;
+import com.gsp.bridge.domain.user.domain.repository.UserRepository;
 import com.gsp.bridge.domain.user.exception.CompanyNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
