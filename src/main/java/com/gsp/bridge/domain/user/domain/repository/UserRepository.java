@@ -1,6 +1,6 @@
-package com.gsp.bridge.domain.user.domain.entity.repository;
+package com.gsp.bridge.domain.user.domain.repository;
 
-import com.gsp.bridge.domain.user.domain.entity.User;
+import com.gsp.bridge.domain.user.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

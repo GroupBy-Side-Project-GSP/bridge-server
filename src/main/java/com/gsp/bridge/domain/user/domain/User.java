@@ -1,6 +1,6 @@
-package com.gsp.bridge.domain.user.domain.entity;
+package com.gsp.bridge.domain.user.domain;
 
-import com.gsp.bridge.domain.user.domain.entity.type.Authority;
+import com.gsp.bridge.domain.user.domain.type.Authority;
 import com.gsp.bridge.global.entity.BaseTimeIdEntity;
 import com.gsp.bridge.infrastructure.s3.DefaultImage;
 import lombok.*;

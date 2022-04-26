@@ -1,6 +1,6 @@
 package com.gsp.bridge.doamin.notification.service;
 
-import com.gsp.bridge.domain.user.domain.entity.User;
+import com.gsp.bridge.domain.user.domain.User;
 import com.gsp.bridge.domain.user.facade.UserFacade;
 import com.gsp.bridge.domain.notification.domain.NotificationList;
 import com.gsp.bridge.domain.notification.domain.repository.NotificationListRepository;

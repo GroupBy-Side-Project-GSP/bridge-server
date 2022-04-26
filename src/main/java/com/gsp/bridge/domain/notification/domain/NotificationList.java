@@ -1,6 +1,6 @@
 package com.gsp.bridge.domain.notification.domain;
 
-import com.gsp.bridge.domain.company.domain.entity.Company;
+import com.gsp.bridge.domain.user.domain.User;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -25,16 +25,16 @@ public class NotificationList {
     @Id
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private Company company;
+    private User user;
 
     @NotNull
     @ColumnDefault("0")
     private Boolean isRead;
 
     @Builder
-    public NotificationList(NotificationEntity notificationEntity, Company companyId) {
+    public NotificationList(NotificationEntity notificationEntity, User userId) {
         this.notificationEntity = notificationEntity;
-        this.company = companyId;
+        this.user = userId;
         this.isRead = false;
     }
 

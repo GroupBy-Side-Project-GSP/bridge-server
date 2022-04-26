@@ -1,6 +1,6 @@
 package com.gsp.bridge.global.security.auth;
 
-import com.gsp.bridge.domain.user.domain.entity.User;
+import com.gsp.bridge.domain.user.domain.User;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;

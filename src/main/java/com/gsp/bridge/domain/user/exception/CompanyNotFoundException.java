@@ -1,4 +1,4 @@
-package com.gsp.bridge.domain.company.exception;
+package com.gsp.bridge.domain.user.exception;
 
 import com.gsp.bridge.global.error.exception.CustomException;
 import com.gsp.bridge.global.error.exception.ErrorCode;
