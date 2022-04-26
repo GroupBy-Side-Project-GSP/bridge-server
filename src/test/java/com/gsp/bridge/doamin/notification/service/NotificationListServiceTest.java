@@ -41,7 +41,7 @@ class NotificationListServiceTest {
         Pageable pageable = PageRequest.of(5, 5);
         QueryNotificationListResponse response = new QueryNotificationListResponse(new ArrayList<>());
 
-        when(userFacade.getCurrentCompany())
+        when(userFacade.getCurrentUser())
                 .thenReturn(user);
         given(notificationListRepository.findByUser(user, pageable))
                 .willReturn(notificationList);

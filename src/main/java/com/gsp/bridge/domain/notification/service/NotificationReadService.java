@@ -26,7 +26,7 @@ public class NotificationReadService {
             throw NotificationNotFoundException.EXCEPTION;
         }
 
-        User user = userFacade.getCurrentCompany();
+        User user = userFacade.getCurrentUser();
 
         NotificationListId notificationListId = NotificationListId.builder()
                 .notificationEntity(notificationId)

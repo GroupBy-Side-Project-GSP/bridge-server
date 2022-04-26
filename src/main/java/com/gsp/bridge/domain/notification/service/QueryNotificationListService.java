@@ -29,7 +29,7 @@ public class QueryNotificationListService {
     @Transactional(readOnly = true)
     public QueryNotificationListResponse execute(Pageable pageable) {
 
-        User user = userFacade.getCurrentCompany();
+        User user = userFacade.getCurrentUser();
         List<NotificationResponse> notificationLists = notificationListRepository.findByUser(user, pageable)
                 .stream()
                 .map(this::getNotification)
