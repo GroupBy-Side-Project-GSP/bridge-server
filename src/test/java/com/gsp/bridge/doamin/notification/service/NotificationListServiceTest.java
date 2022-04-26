@@ -43,7 +43,7 @@ class NotificationListServiceTest {
 
         when(userFacade.getCurrentCompany())
                 .thenReturn(user);
-        given(notificationListRepository.findByCompany(user, pageable))
+        given(notificationListRepository.findByUser(user, pageable))
                 .willReturn(notificationList);
 
         //when

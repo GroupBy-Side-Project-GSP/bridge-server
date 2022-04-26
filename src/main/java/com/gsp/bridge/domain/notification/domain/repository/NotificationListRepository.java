@@ -9,5 +9,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface NotificationListRepository extends CrudRepository<NotificationList, NotificationListId> {
 
-    Page<NotificationList> findByCompany(User user, Pageable pageable);
+    Page<NotificationList> findByUser(User user, Pageable pageable);
 }

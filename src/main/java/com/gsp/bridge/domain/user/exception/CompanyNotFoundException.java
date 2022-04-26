@@ -9,6 +9,6 @@ public class CompanyNotFoundException extends CustomException {
             new CompanyNotFoundException();
 
     private CompanyNotFoundException() {
-        super(ErrorCode.COMPANY_NOT_FOUND);
+        super(ErrorCode.USER_NOT_FOUND);
     }
 }
